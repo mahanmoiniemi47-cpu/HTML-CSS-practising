@@ -396,20 +396,39 @@ section {
             margin: 80px auto;
             cursor: pointer;
 
-            img {
+            #main-photo {
                 position: relative;
-                background: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 340px;
+                height: 340px;
 
-
-                >img {
+                >#dorbin {
+                    visibility: hidden;
                     position: absolute;
+                    width: 340px;
+                    height: 340px;
+                    background: linear-gradient(to right, rgb(132, 144, 255), rgb(98, 189, 252));
+                    opacity: .8;
+                    border-radius: 4px;
+
+                    >img {
+                        margin-top: 133px;
+                    }
+
                 }
+
+                &:hover {
+                    #dorbin {
+                        visibility: visible;
+                    }
+                }
+
+
             }
 
-            img:hover {
-                background: (to right, #8490ff, #62bdfc);
-                opacity: .5;
-            }
+
 
             h3 {
                 line-height: 0%;
@@ -581,10 +600,17 @@ section {
             color: #929090;
         }
 
-        .box:hover {
-            >img {
-                transform: translateZ(29px);
 
+        .boxs-zoomer {
+            overflow: hidden;
+        }
+
+        .box:hover {
+            .boxs-zoomer {
+                >img {
+                    transform: scale(1.1);
+                    transition: all 2s ease-out;
+                }
             }
 
             h3 {
