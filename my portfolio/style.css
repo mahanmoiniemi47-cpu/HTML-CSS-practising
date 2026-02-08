@@ -1,7 +1,14 @@
 body {
-    margin: 0;
-    background-image:linear-gradient(to right, rgb(39, 65, 153), rgba(25, 20, 94, 0.904)) ;
+    margin: 0 auto;
     font-family: sans-serif;
+    background-image: url(night-mountain-landscape-starry-sky.jpg);
+
+     height: 66vh; 
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
 }
 
 section {
@@ -18,8 +25,8 @@ section {
     height: 410px;
     position: relative;
     transform-style: preserve-3d;
-    transition-property:all ;
-    transition-duration:1.2s ;
+    transition-property: all;
+    transition-duration: 1.2s;
     transition-timing-function: ease-in-out;
     cursor: pointer;
     border-radius: 15px;
@@ -27,8 +34,8 @@ section {
 
 .card:hover {
     transform: rotateY(-180deg);
-     box-shadow:0px 0px 420px white ; 
-} 
+    box-shadow: 0px 0px 420px white;
+}
 
 .front,
 .back {
