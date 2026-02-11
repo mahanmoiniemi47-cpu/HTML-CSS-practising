@@ -2,13 +2,11 @@ body {
     margin: 0 auto;
     font-family: sans-serif;
     background-image: url(night-mountain-landscape-starry-sky.jpg);
-
-     height: 66vh; 
-
+    height: 91vh;
+    overflow: hidden;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
 }
 
 section {
@@ -20,21 +18,20 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 70px auto;
-    width: 360px;
-    height: 410px;
+    margin: 92px auto;
+    width: 330px;
+    height: 380px;
     position: relative;
     transform-style: preserve-3d;
     transition-property: all;
-    transition-duration: 1.2s;
+    transition-duration: 2s;
     transition-timing-function: ease-in-out;
     cursor: pointer;
     border-radius: 15px;
-}
 
-.card:hover {
-    transform: rotateY(-180deg);
-    box-shadow: 0px 0px 420px white;
+    &:hover {
+        transform: rotateY(-180deg);
+    }
 }
 
 .front,
@@ -50,40 +47,51 @@ section {
     align-items: center;
     gap: 8px;
     color: whitesmoke;
+
 }
 
 .front {
-    background-color: rgba(17, 3, 82, 0);
-}
+    background-color: rgba(190, 188, 197, 0.898);
 
-.front>img {
-    width: 100px;
-    border-radius: 50%;
-    padding-bottom: 20px;
-}
+    >img {
+        width: 87px;
+        border: 2px double;
+        border-radius: 50%;
+    }
 
-.front span:first-of-type {
-    font-size: 14px;
-    font-weight: 500;
-}
+    span:first-of-type {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 0%;
+    }
 
-.front span:last-of-type {
-    font-size: 12px;
-    font-weight: 700;
-    vertical-align: middle;
+    span:last-of-type {
+        margin-top: 10px;
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 700;
+
+        >img {
+            display: inline-block;
+            vertical-align: middle;
+            padding-right: 4px;
+            width: 12px;
+        }
+    }
 }
 
 .back {
     background-color: #1111113a;
     transform: rotateY(180deg);
-}
 
-.back img {
-    width: 60px;
-    margin-bottom: 10px;
-}
 
-.back h3 {
-    color: aqua;
-    font-weight: 500;
+    img {
+        width: 60px;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        color: aqua;
+        font-weight: 500;
+    }
 }
