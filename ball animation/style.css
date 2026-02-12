@@ -1,0 +1,114 @@
+body {
+  background: #111;
+}
+
+.box {
+  margin: 50px auto;
+  width: 1500px;
+  height: 800px;
+  border-radius: 10px;
+  position: relative;
+  background: #222;
+}
+
+.rectangle {
+  width: 120px;
+  height: 30px;
+  background: #fff;
+  border-radius: 0 12px 12px 0;
+  position: absolute;
+  top: 68px;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  background: red;
+  border: #111 5px solid;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+@keyframes move-ball {
+  0% {}
+
+  10% {
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    left: 120px;
+  }
+
+  12% {
+    height: 60px;
+    width: 40px;
+  }
+
+  20% {
+    top: 750px;
+    left: 300px;
+    width: 65px;
+    height: 40px;
+  }
+
+  22% {
+    height: 60px;
+    width: 40px;
+  }
+
+  30% {
+    width: 40px;
+    height: 40px;
+    top: 250px;
+    left: 550px;
+  }
+
+  33% {
+    height: 60px;
+    width: 40px;
+  }
+
+  40% {
+    width: 65px;
+    height: 40px;
+    top: 750px;
+    left: 750px;
+  }
+
+  50% {
+    top: 450px;
+    left: 900px;
+  }
+
+  60% {
+    top: 750px;
+    left: 1100px;
+  }
+
+  70% {
+    top: 550px;
+    left: 1200px;
+  }
+
+  80% {
+    top: 750px;
+    left: 1350px;
+  }
+
+  90% {
+    top: 650px;
+    left: 1400px;
+  }
+
+  100% {
+    top: 750px;
+    left: 1450px;
+    border-radius: 100%;
+  }
+}
+
+.box:hover .circle {
+  animation: move-ball 20s forwards;
+}
