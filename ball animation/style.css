@@ -108,7 +108,7 @@ body {
     border-radius: 100%;
   }
 }
-
-.box:hover .circle {
+..
+.box:hover~ .circle {
   animation: move-ball 20s forwards;
 }
