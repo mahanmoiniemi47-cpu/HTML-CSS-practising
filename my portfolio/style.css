@@ -40,7 +40,7 @@ section {
             transform: translateZ(80px) ;   
         }
     }
-.
+
     .front,
     .back {
         position: absolute;
