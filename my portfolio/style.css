@@ -7,6 +7,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
 }
 
 section {
@@ -15,10 +16,25 @@ section {
 
     #flip {
         display: none;
+        z-index: 2;
+
+        &:checked~.wrapper .card {
+            transform: rotateY(-180deg);
+        }
     }
 
-    #flip:checked~ .card {
+    /* #flip:checked~.card {       ☝️☝️این داره همون خط کد بالا رو تکرار میکند (از خط 29)
         transform: rotateY(-180deg);
+    } */
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        z-index: 1;
+
+        /* &:hover {
+            filter: blur(6px);
+        } */
     }
 
     .card {
@@ -35,9 +51,10 @@ section {
         transition-timing-function: ease-out;
         cursor: pointer;
         border-radius: 15px;
+        
 
-        &:hover{
-            transform: translateZ(80px) ;   
+        &:hover {
+            transform: translateZ(80px);
         }
     }
 
