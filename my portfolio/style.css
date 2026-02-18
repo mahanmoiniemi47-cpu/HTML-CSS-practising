@@ -1,122 +1,123 @@
 body {
-    margin: 0 auto;
+    margin: 0px auto;
     font-family: sans-serif;
-    background-image: url(night-mountain-landscape-starry-sky.jpg);
-    height: 91vh;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 
-}
-
-section {
-    perspective: 1000px;
-    /* gives the 3D effect */
-
-    #flip {
-        display: none;
-        z-index: 2;
-
-        &:checked~.wrapper .card {
-            transform: rotateY(-180deg);
+    section {
+        position: relative;
+        perspective: 1000px;
+        /* gives the 3D effect */
+        
+        .bg {
+            background-image: url(night-mountain-landscape-starry-sky.jpg);
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            transition: filter .4s ease;
+            height: 100vh;    
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
-    }
 
-    /* #flip:checked~.card {       ☝️☝️این داره همون خط کد بالا رو تکرار میکند (از خط 29)
+
+        #flip {
+            display: none;
+
+            &:checked~.card {
+                transform: rotateY(-180deg);
+            }
+        }
+
+        /* #flip:checked~.card {       ☝️☝️این داره همون خط کد بالا رو تکرار میکند (از خط 29)
         transform: rotateY(-180deg);
     } */
 
-    .wrapper {
-        display: flex;
-        justify-content: center;
-        z-index: 1;
+        .card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px auto;
+            width: 330px;
+            height: 380px;
+            position: relative;
+            top: 120px; 
+            transform-style: preserve-3d;
+            transition-property: all;
+            transition-duration: .90s;
+            transition-timing-function: ease-out;
+            cursor: pointer;
+            border-radius: 15px;
 
-        /* &:hover {
-            filter: blur(6px);
-        } */
-    }
 
-    .card {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 92px auto;
-        width: 330px;
-        height: 380px;
-        position: relative;
-        transform-style: preserve-3d;
-        transition-property: all;
-        transition-duration: .90s;
-        transition-timing-function: ease-out;
-        cursor: pointer;
-        border-radius: 15px;
-        
-
-        &:hover {
-            transform: translateZ(80px);
-        }
-    }
-
-    .front,
-    .back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        border-radius: 20px;
-        backface-visibility: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        color: whitesmoke;
-    }
-
-    .front {
-        background-color: rgba(190, 188, 197, 0.898);
-
-        >img {
-            width: 87px;
-            border: 2px double;
-            border-radius: 50%;
-        }
-
-        span:first-of-type {
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 0%;
-        }
-
-        span:last-of-type {
-            margin-top: 10px;
-            display: inline-block;
-            font-size: 12px;
-            font-weight: 700;
-
-            >img {
-                display: inline-block;
-                vertical-align: middle;
-                padding-right: 4px;
-                width: 12px;
+            &:hover {
+                transform: translateZ(80px);
             }
         }
-    }
 
-    .back {
-        background-color: #1111113a;
-        transform: rotateY(180deg);
-
-
-        img {
-            width: 60px;
-            margin-bottom: 10px;
+        .front,
+        .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            color: whitesmoke;
         }
 
-        h3 {
-            color: aqua;
-            font-weight: 500;
+        .front {
+            background-color: rgba(190, 188, 197, 0.898);
+
+            >img {
+                width: 87px;
+                border: 2px double;
+                border-radius: 50%;
+            }
+
+            span:first-of-type {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 0%;
+            }
+
+            span:last-of-type {
+                margin-top: 10px;
+                display: inline-block;
+                font-size: 12px;
+                font-weight: 700;
+
+                >img {
+                    display: inline-block;
+                    vertical-align: middle;
+                    padding-right: 4px;
+                    width: 12px;
+                }
+            }
         }
+
+        .back {
+            background-color: #1111113a;
+            transform: rotateY(180deg);
+
+            img {
+                width: 60px;
+                margin-bottom: 10px;
+            }
+
+            h3 {
+                color: aqua;
+                font-weight: 500;
+            }
+        }
+
     }
 
+    section:has(.card:hover) .bg {
+        filter: blur(10px);
+    }
 }
