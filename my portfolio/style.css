@@ -6,14 +6,14 @@ body {
         position: relative;
         perspective: 1000px;
         /* gives the 3D effect */
-        
+
         .bg {
             background-image: url(night-mountain-landscape-starry-sky.jpg);
             position: absolute;
             inset: 0;
             z-index: -1;
             transition: filter .4s ease;
-            height: 100vh;    
+            height: 100vh;
             overflow: hidden;
             background-size: cover;
             background-position: center;
@@ -41,7 +41,7 @@ body {
             width: 330px;
             height: 380px;
             position: relative;
-            top: 120px; 
+            top: 120px;
             transform-style: preserve-3d;
             transition-property: all;
             transition-duration: .90s;
@@ -118,6 +118,6 @@ body {
     }
 
     section:has(.card:hover) .bg {
-        filter: blur(10px);
+        filter: blur(10px) brightness(0.4) saturate(0.2) contrast(1.3) ;
     }
 }
