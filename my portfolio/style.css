@@ -129,7 +129,7 @@ body {
         filter: blur(10px) brightness(0.4) saturate(0.2) contrast(1.3);
     }
 
-    section:has(#flip:hover) (:not:hover){
+    /* section:has(#flip:hover) (:not:hover){
            transform: rotateY(180deg);
-    }
+    } */
 }
