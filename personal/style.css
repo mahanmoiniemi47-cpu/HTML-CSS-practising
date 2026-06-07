@@ -37,7 +37,7 @@ header {
         justify-content: space-between;
         align-items: center;
         height: 70px;
-        width: 1140px;
+        width: 1140px; 
         margin: 0 auto;
 
         nav {
@@ -100,8 +100,6 @@ header {
                                 box-shadow: 0px 0px 7px rgb(100, 100, 100);
                                 transition: all 0.70s (cubic-bezier(0.445, 0.05, 0.55, 0.95));
                                 transition-delay: 0.3s;
-
-
                             }
 
 
@@ -116,7 +114,6 @@ header {
 
                 >li:hover>ul {
                     visibility: visible;
-
                 }
             }
         }
@@ -127,19 +124,17 @@ header {
 section {
 
     .first-container {
-
-
         #back-ground {
             background-color: #f9f9ff;
-        }
-
+        }   
+        
         .info {
             height: 670px;
             width: 1440px;
             display: flex;
             align-items: center;
             justify-content: space-evenly;
-            margin: 0 auto;
+            margin: 0 auto;  
 
 
             >.detaile {
@@ -414,7 +409,7 @@ section {
                     border-radius: 4px;
 
                     >img {
-                        margin-top: 133px;
+                        margin-top: 153px;
                     }
 
                 }
